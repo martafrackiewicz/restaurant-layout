@@ -88,6 +88,8 @@
           .cart {
             width: 21px;
             height: 17px;
+            position: absolute;
+            bottom: 0;
           }
 
           .amount {
@@ -99,8 +101,8 @@
             border-radius: 50%;
             padding: 3px;
             position: absolute;
-            bottom: 10px;
-            left: 14px;
+            bottom: 9px;
+            left: 15px;
           }
         }
       }
