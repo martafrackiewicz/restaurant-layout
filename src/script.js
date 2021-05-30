@@ -13,7 +13,6 @@ const moveRight = () => {
   }
 
   setSlide(index);
-  clearInterval(slideInterval);
 };
 
 const moveLeft = () => {
@@ -24,7 +23,6 @@ const moveLeft = () => {
   }
 
   setSlide(index);
-  clearInterval(slideInterval);
 };
 
 const setSlide = (index) => {
@@ -38,8 +36,15 @@ const setSlide = (index) => {
     });
 }
 
-$leftArrow.addEventListener("click", moveLeft);
-$rightArrow.addEventListener("click", moveRight);
+$leftArrow.addEventListener("click", () => {
+  moveLeft();
+  clearInterval(slideInterval);
+});
+
+$rightArrow.addEventListener("click", () => {
+  moveRight();
+  clearInterval(slideInterval);
+});
 
 const slideInterval = setInterval(() => {
   moveRight();
