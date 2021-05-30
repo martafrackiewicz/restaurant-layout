@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-primary;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: $c-orange-200;
+    border-radius: 4px;
+    color: $c-white;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    letter-spacing: 0.35px;
+}
+
+a {
+    text-decoration: none;
+    color: $c-white;
+}
