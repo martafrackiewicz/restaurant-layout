@@ -124,9 +124,7 @@
                 <div class="el-wrapper">
                   <div class="el-main">
                     <h3 class="el-title">Toasted jam</h3>
-                    <p class="el-text">
-                      Phasellus a ex accumsan, sollicitudin
-                    </p>
+                    <p class="el-text">Phasellus a ex accumsan, sollicitudin</p>
                   </div>
                   <div class="el-price">
                     <p class="el-price-details">$22.00</p>
@@ -137,9 +135,7 @@
                 <div class="el-wrapper">
                   <div class="el-main">
                     <h3 class="el-title">Toasted jam</h3>
-                    <p class="el-text">
-                      Phasellus a ex accumsan, sollicitudin
-                    </p>
+                    <p class="el-text">Phasellus a ex accumsan, sollicitudin</p>
                   </div>
                   <div class="el-price">
                     <p class="el-price-details">$39.00</p>
@@ -179,14 +175,22 @@
             <h2 class="menu-title">Today Special</h2>
             <div class="special-wrapper">
               <figure class="special-figure">
-                <img src="images/320x172.png" alt="Pizza marinara" class="special-figure-image" />
+                <img
+                  src="images/320x172.png"
+                  alt="Pizza marinara"
+                  class="special-figure-image"
+                />
                 <figcaption class="special-figure-image-caption">
                   Pizza marinara
                   <p class="special-figure-image-caption-price">$89.00</p>
                 </figcaption>
               </figure>
               <figure class="special-figure">
-                <img src="images/320x172.png" alt="Chicken nuggets" class="special-figure-image" />
+                <img
+                  src="images/320x172.png"
+                  alt="Chicken nuggets"
+                  class="special-figure-image"
+                />
                 <figcaption class="special-figure-image-caption">
                   Chicken nuggets
                   <p class="special-figure-image-caption-price">$59.99</p>
@@ -197,6 +201,54 @@
         </div>
       </section>
       <!--end of menu-->
+
+      <section class="reserve-section">
+        <div class="container reserve-section-container">
+          <div class="form-wrapper">
+            <h2 class="form-title">Reserve your table</h2>
+            <form class="form-body">
+              <input type="text" placeholder="Name*" required />
+              <input type="email" placeholder="Email adress*" required />
+              <input
+                type="text"
+                placeholder="Time*"
+                onfocus="(this.type='time')"
+                onblur="(this.type='text')"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Date*"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+                required
+              />
+              <input type="number" placeholder="Guests*" required />
+              <input type="tel" placeholder="Phone*" required />
+            </form>
+            <div class="form-footer">
+              <button type="submit" class="button">Make reservation</button>
+              <div class="footer-text">
+                <p class="text-content">You can also call</p>
+                <p class="text-content-pink">for a reservation</p>
+              </div>
+              <p class="footer-text-number">1-007 000 005</p>
+            </div>
+          </div>
+          <!--end of form wrapper-->
+          <img
+            src="images/293.png"
+            alt=""
+            class="reserve-section-decorative-image reserve-section-decorative-image-left"
+          />
+          <img
+            src="images/241x234.png"
+            alt=""
+            class="reserve-section-decorative-image reserve-section-decorative-image-right"
+          />
+        </div>
+      </section>
+      <!--end of reserve section-->
     </div>
     <!--end of wrap-->
 
