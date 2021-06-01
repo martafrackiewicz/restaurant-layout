@@ -1,3 +1,19 @@
+// -----------------------sticky header -------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".page-header");
+
+  window.addEventListener("scroll", function () {
+    console.log(window.scrollY);
+    if (window.scrollY > 90) {
+      header.className = "page-header-sticky";
+    } else {
+      header.className = "page-header";
+    }
+  });
+});
+
+
 // -----------------------carousel----------------------------------
 const $slides = document.querySelectorAll(".carousel-slide");
 const $leftArrow = document.querySelector(".carousel-arrow-left");

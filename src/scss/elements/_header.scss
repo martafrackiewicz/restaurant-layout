@@ -45,13 +45,15 @@
   left: 0;
   width: 100%;
   background: transparent;
-  margin-top: 23px;
+  padding: 22px 0 22px 0;
+  transition: 0.5s;
 
   &-container {
     height: 47px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s;
 
     .page-logo {
       &-text {
@@ -121,6 +123,33 @@
     }
   }
 }
+
+.page-header-sticky {
+  @extend .page-header;
+  background-color: $c-grey-200;
+  z-index: 999;
+  padding: 16px 0;
+
+  .page-logo-text {
+    font-size: 14px;
+    padding-left: 0;
+    padding-bottom: 10px;
+
+    &-orange {
+      font-size: 26px;
+    }
+  }
+  
+  .header-button {
+    font-size: 12px;
+
+    img {
+      width: 17px;
+      height: 14px;
+    }
+  }
+}
+
 
 .carousel {
   display: flex;
