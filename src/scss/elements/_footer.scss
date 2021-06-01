@@ -1,0 +1,193 @@
+.page-footer {
+  background-color: $c-grey-600;
+
+  &-body-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 43px;
+  }
+
+  &-container {
+    padding-top: 133px;
+  }
+
+  .footer-title {
+    color: $c-white;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  &-copyright {
+    padding-bottom: 67px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      flex: 1 0 20px;
+      border-top: 3px solid;
+      margin: 0 35px 0 0;
+      color: $c-grey-500;
+    }
+
+    &::after {
+      content: "";
+      border-top: 3px solid;
+      flex: 1 0 20px;
+      margin: 0 0 0 35px;
+      color: $c-grey-500;
+    }
+    &-text {
+      color: $c-grey-200;
+      font-size: 13px;
+      font-family: $font-secondary;
+      span {
+        color: $c-white;
+      }
+    }
+  }
+}
+
+.navigation-wrapper {
+  padding-bottom: 79px;
+  .footer-menu {
+    &-list {
+      &-el {
+        padding-bottom: 16px;
+      }
+
+      &-link {
+        color: $c-grey-200;
+        font-family: $font-secondary;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.newsletter-wrapper {
+  .newsletter-text {
+    color: $c-grey-200;
+    font-family: $font-secondary;
+    font-size: 14px;
+  }
+
+  .newsletter-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    input {
+      width: 370px;
+      height: 51px;
+      border-radius: 2px;
+      padding: 20px 0 17px 23px;
+      background-color: transparent;
+      margin-right: 9px;
+      border: 2px solid $c-grey-300;
+      color: $c-grey-100;
+
+      &::placeholder {
+        color: $c-grey-100;
+        font-family: $font-secondary;
+        font-size: 14px;
+      }
+    }
+
+    .button {
+      height: 51px;
+    }
+  }
+
+  .social-media {
+    &-wrapper {
+      margin-top: 37px;
+      display: flex;
+    }
+
+    &-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      margin-right: 7px;
+      position: relative;
+
+      i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $c-white;
+        font-size: 20px;
+      }
+
+      &.facebook {
+        background-color: $c-blue-200;
+      }
+      &.twitter {
+        background-color: $c-blue-100;
+      }
+      &.pinterest {
+        background-color: $c-red;
+      }
+    }
+  }
+}
+
+.app-wrapper {
+  .app-button {
+    width: 219px;
+    height: 61px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-grey-500;
+    transition: 0.5s;
+    padding: 15px 0 14px 0;
+
+    &:hover {
+      background-color: $c-grey-300;
+    }
+
+    &-content-apple {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        width: 29px;
+        height: 33px;
+        background-image: url("../images/icon_apple.png");
+        margin-right: 25px;
+      }
+    }
+
+    &-content-google {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        width: 29px;
+        height: 33px;
+        display: inline-block;
+        background-image: url("../images/icon_Google Play.png");
+        margin-right: 15px;
+      }
+    }
+
+    &-text {
+      font-family: $font-secondary;
+      font-size: 11px;
+      color: $c-grey-100;
+
+      &-big {
+        font-size: 18px;
+      }
+    }
+  }
+}
