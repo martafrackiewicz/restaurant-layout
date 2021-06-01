@@ -1,0 +1,35 @@
+.hours-section {
+    position: relative;
+    &-container {
+        padding: 90px 0 78px 0;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &-title {
+        margin-right: 166px;
+    }
+
+    &-details-wrapper {
+        margin-right: 59px;
+
+        .details-days {
+            color: $c-grey-600;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .details-hours {
+            font-size: 30px;
+            color: $c-orange-200;
+            font-weight: 700;
+        }
+    }
+
+    &-decorative-image {
+        position: absolute;
+        bottom: -46px;
+        right: 436px;
+    }
+}
