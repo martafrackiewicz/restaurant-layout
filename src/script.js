@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".page-header");
 
   window.addEventListener("scroll", function () {
-    console.log(window.scrollY);
     if (window.scrollY > 90) {
       header.className = "page-header-sticky";
     } else {
@@ -66,3 +65,25 @@ const slideInterval = setInterval(() => {
   moveRight();
 }, 2000);
 // ----------------------end-of-carousel------------------------------
+
+import Swiper, { Autoplay } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
+SwiperCore.use([Navigation, Pagination, Autoplay
+]);
+
+const swiper = new Swiper(".swiper-container", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 100,
+  speed: 1000,
+  height: 330,
+  autoHeight: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const csso = require('gulp-csso');
 const imagemin = require("gulp-imagemin");
+const webpack = require("webpack-stream");
 
 sass.compiler = require('sass')
 
@@ -47,6 +48,14 @@ function makeHtml() {
 function makeJs() {
     return gulp
       .src("./src/script.js")
+      .pipe(
+        webpack({
+          mode: "development",
+          output: {
+            filename: "script.js",
+          },
+        })
+      )
       .pipe(uglify())
       .pipe(gulp.dest("./dist"))
       .pipe(browserSync.reload({ stream: true }));
