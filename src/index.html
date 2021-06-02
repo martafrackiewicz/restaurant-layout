@@ -226,9 +226,15 @@
           <div class="form-wrapper">
             <h2 class="form-title">Reserve your table</h2>
             <form class="form-body">
-              <input type="text" placeholder="Name*" required />
-              <input type="email" placeholder="Email adress*" required />
+              <input id="input-name" type="text" placeholder="Name*" required />
               <input
+                id="input-email"
+                type="email"
+                placeholder="Email adress*"
+                required
+              />
+              <input
+                id="input-time"
                 type="text"
                 placeholder="Time*"
                 onfocus="(this.type='time')"
@@ -236,14 +242,20 @@
                 required
               />
               <input
+                id="input-date"
                 type="text"
                 placeholder="Date*"
                 onfocus="(this.type='date')"
                 onblur="(this.type='text')"
                 required
               />
-              <input type="number" placeholder="Guests*" required />
-              <input type="tel" placeholder="Phone*" required />
+              <input
+                id="input-guests"
+                type="number"
+                placeholder="Guests*"
+                required
+              />
+              <input id="input-tel" type="tel" placeholder="Phone*" required />
             </form>
             <div class="form-footer">
               <button type="submit" class="button">Make reservation</button>
