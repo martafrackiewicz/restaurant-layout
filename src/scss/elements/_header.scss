@@ -139,7 +139,7 @@
       font-size: 26px;
     }
   }
-  
+
   .header-button {
     font-size: 12px;
 
@@ -150,12 +150,16 @@
   }
 }
 
-
 .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  height: 100%;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
 
   &-arrow {
     top: 360px;
@@ -167,13 +171,13 @@
     border-width: 0 2px 2px 0;
 
     &-left {
-      left: 100px;
-      transform: rotate(135deg);
+      left: 0;
+      transform: translateX(calc(50% + 60px)) rotate(135deg);
     }
 
     &-right {
-      right: 100px;
-      transform: rotate(-45deg);
+      right: 0;
+      transform: translateX(calc(-50% - 60px)) rotate(-45deg);
     }
   }
 
@@ -185,7 +189,7 @@
     display: none;
 
     &.active {
-        display: block;
+      display: block;
     }
   }
 
