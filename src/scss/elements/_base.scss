@@ -36,3 +36,27 @@ h2 {
     font-size: 35px;
     font-weight: 700;
 }
+
+.swiper-pagination-bullet {
+  border: 2px solid $c-grey-600;
+  background-color: transparent;
+  width: 14px;
+  height: 14px;
+}
+.swiper-pagination-bullet-active {
+  background-color: transparent;
+  border: 2px solid $c-orange-200;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $c-orange-200;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

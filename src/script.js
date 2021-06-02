@@ -71,7 +71,7 @@ import SwiperCore, { Navigation, Pagination } from "swiper/core";
 SwiperCore.use([Navigation, Pagination, Autoplay
 ]);
 
-const swiper = new Swiper(".swiper-container", {
+const opinionSwiper = new Swiper(".swiper-container.opinion-section-swiper", {
   direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 100,
@@ -83,7 +83,27 @@ const swiper = new Swiper(".swiper-container", {
     delay: 5000,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination.opinion-section-pagination",
     clickable: true,
+  },
+});
+
+const gallerySwiper = new Swiper(".swiper-container.gallery-section-swiper", {
+  direction: "horizontal",
+  freeMode: true,
+  width: 471,
+  speed: 500,
+  autoHeight: true,
+  loop: true,
+  loopedSlides: 4,
+  loopFillGroupWithBlank: true,
+  autoplay: {
+    delay: 1500,
+  },
+  freeModeMomentum: false,
+  pagination: {
+    el: ".swiper-pagination.gallery-section-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
 });
