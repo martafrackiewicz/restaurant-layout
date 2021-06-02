@@ -97,6 +97,12 @@
       box-shadow: 0px 36px 51px #0000001a;
       width: max-content;
 
+      &:hover {
+        margin-top: 14px;
+        transform: scale(1.2);
+        z-index: 99;
+      }
+
       &:nth-of-type(2) {
         margin-left: 10px;
         @media (max-width: $laptop) {
@@ -117,6 +123,7 @@
           height: 172px;
         }
         &-caption {
+          background-color: $c-white;
           padding: 29px 0 50px 38px;
           color: $c-grey-400;
           font-size: 22px;
