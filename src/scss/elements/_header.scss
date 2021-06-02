@@ -47,6 +47,7 @@
   background: transparent;
   padding: 22px 0 22px 0;
   transition: 0.5s;
+  z-index: 9999;
 
   &-container {
     height: 47px;
@@ -82,6 +83,7 @@
       &-list {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         &-el {
           margin-left: 30px;
@@ -151,7 +153,7 @@
 }
 
 .carousel {
-  height: 100%;
+  height: calc(100% - 47px);
 
   &-container {
     display: flex;
@@ -199,5 +201,89 @@
 
   &-text {
     font-size: 42px;
+  }
+}
+
+.page-menu-burger {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .page-menu {
+    position: relative;
+    &-burger {
+      display: flex;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: none;
+      border: none;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: $c-white;
+        margin: 2px;
+      }
+    }
+  }
+
+  .header-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .open-menu span:nth-of-type(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  .open-menu span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .open-menu span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  .page-menu-list {
+    position: absolute;
+    top: -500px;
+    background-color: $c-grey-300;
+    flex-direction: column;
+    padding: 0 50px 0 30px;
+
+    &-el {
+      padding: 14px 10px;
+      margin-left: 0;
+
+      &:first-child {
+        margin-top: 40px;
+      }
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-link:hover {
+      border-bottom: none;
+      color: $c-grey-200;
+    }
+  }
+
+  .show-menu {
+    display: flex;
+    top: 80px;
+    transition: 0.5s;
+    right: 0;
   }
 }

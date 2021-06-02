@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//---------------------burger menu----------------------------
+const $button = document.querySelector(".page-menu-burger");
+const $menu = document.querySelector(".page-menu-list");
+
+$button.addEventListener("click", function () {
+    $menu.classList.toggle("show-menu");
+    this.classList.toggle("open-menu");
+});
 
 // -----------------------carousel----------------------------------
 const $slides = document.querySelectorAll(".carousel-slide");
