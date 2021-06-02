@@ -4,21 +4,38 @@
   padding-bottom: 84px;
   &-container {
     display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
   .menu-title {
     font-size: 35px;
     margin-bottom: 28px;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   .menu-table {
     width: 50%;
     margin-right: 40px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-right: 0;
+      text-align:center;
+    }
 
     .menu-list {
       margin-bottom: 48px;
       height: 298px + 48px;
       overflow: auto;
+      @media (max-width: $laptop) {
+        height: 298px + 128px;
+      }
+      @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
 
       &-el {
         &:not(:first-child) {
@@ -61,22 +78,54 @@
     }
   }
 
+  .menu-special {
+    max-width: 50%;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
   .special-wrapper {
     display: flex;
+    @media (max-width: $laptop) {
+      flex-direction: column;
+      align-items: center;
+    }
+
 
     .special-figure {
-box-shadow: 0px 36px 51px #0000001A;
+      box-shadow: 0px 36px 51px #0000001a;
+      width: max-content;
 
-        &:nth-of-type(2) {
-            margin-left: 10px;
+      &:nth-of-type(2) {
+        margin-left: 10px;
+        @media (max-width: $laptop) {
+          margin-left: 0;
+          margin-top: 20px;
         }
-        
+      }
+
       &-image {
+        width: 320px;
+        height: 172px;
+        @media (max-width: 1365px) {
+          width: 244px;
+          height: 130px;
+        }
+        @media (max-width: $mobile) {
+     width: 320px;
+        height: 172px;
+    }
         &-caption {
-            padding: 29px 0 50px 38px;
+          padding: 29px 0 50px 38px;
           color: $c-grey-400;
           font-size: 22px;
           font-weight: 700;
+          @media (max-width: $laptop) {
+            padding: 29px 0 20px 38px;
+          }
+          
           &-price {
             color: $c-orange-200;
           }
