@@ -23,7 +23,7 @@
     @media (max-width: $mobile) {
       width: 100%;
       margin-right: 0;
-      text-align:center;
+      text-align: center;
     }
 
     .menu-list {
@@ -34,8 +34,8 @@
         height: 298px + 128px;
       }
       @media (max-width: $mobile) {
-      margin-bottom: 30px;
-    }
+        margin-bottom: 30px;
+      }
 
       &-el {
         &:not(:first-child) {
@@ -82,7 +82,7 @@
     max-width: 50%;
     @media (max-width: $mobile) {
       max-width: 100%;
-      margin-top: 80px;
+      margin-top: 100px;
     }
   }
 
@@ -92,7 +92,6 @@
       flex-direction: column;
       align-items: center;
     }
-
 
     .special-figure {
       box-shadow: 0px 36px 51px #0000001a;
@@ -114,9 +113,9 @@
           height: 130px;
         }
         @media (max-width: $mobile) {
-     width: 320px;
-        height: 172px;
-    }
+          width: 320px;
+          height: 172px;
+        }
         &-caption {
           padding: 29px 0 50px 38px;
           color: $c-grey-400;
@@ -125,7 +124,7 @@
           @media (max-width: $laptop) {
             padding: 29px 0 20px 38px;
           }
-          
+
           &-price {
             color: $c-orange-200;
           }

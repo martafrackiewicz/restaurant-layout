@@ -31,8 +31,8 @@
 
     .form-body {
       @media (max-width: $tablet) {
-           display: grid;
-        }
+        display: grid;
+      }
       input {
         width: 370px;
         height: 51px;
@@ -44,11 +44,11 @@
         font-size: 14px;
         font-family: $font-secondary;
         @media (max-width: $tablet) {
-            font-size: 16px;
-            margin-bottom: 15px;
+          font-size: 16px;
+          margin-bottom: 15px;
         }
         @media (max-width: $tablet) {
-           justify-self: center;
+          justify-self: center;
         }
 
         &:nth-of-type(even) {
@@ -74,6 +74,13 @@
       align-items: center;
       margin-top: 36px;
 
+      .footer-info-wrapper {
+        display: flex;
+        @media (max-width: $mobile) {
+          flex-direction: column;
+        }
+      }
+
       .footer-text {
         .text-content {
           color: $c-white;
@@ -93,6 +100,9 @@
           margin-left: 29px;
           font-size: 24px;
           font-weight: bold;
+          @media (max-width: $mobile) {
+            margin-top: 7px;
+          }
         }
       }
     }
