@@ -17,6 +17,8 @@
     justify-content: center;
 
     .slide-image {
+      width: 269px;
+      height: 295px;
       margin-right: 68px;
       @media (max-width: $mobile) {
         display: none;
