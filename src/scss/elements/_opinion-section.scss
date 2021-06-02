@@ -1,6 +1,9 @@
 .opinion-section {
   &-container {
     padding: 100px 0;
+    @media (max-width: $mobile) {
+      margin-left: 15px;
+    }
   }
 
   .opinion-title {
@@ -15,20 +18,31 @@
 
     .slide-image {
       margin-right: 68px;
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
+  }
 
     .slide-content {
-      width: 640px;
+      max-width: 640px;
       margin-top: 24px;
+      @media (max-width: $tablet) {
+        margin-right: 25px;
+      }
+      @media (max-width: $mobile) {
+            margin-top: 10px;
+          }
 
       .slide-quote {
         margin-bottom: 47px;
         position: relative;
+        @media (max-width: $tablet) {
+          margin-bottom: 15px;
+        }
 
         &::before {
           content: "“";
-          width: 20px;
-          height: 60px;
           display: inline-block;
           font-size: 60px;
           font-weight: 700;
@@ -36,55 +50,72 @@
           position: absolute;
           left: -42px;
           top: -20px;
+          @media (max-width: $tablet) {
+            font-size: 50px;
+            left: -34px;
+          }
+          @media (max-width: $mobile) {
+            display: none;
+          }
         }
 
         &::after {
           content: "“";
-          width: 20px;
-          height: 60px;
           display: inline-block;
           font-size: 60px;
           font-weight: 700;
           color: $c-grey-700;
           position: absolute;
-          right: -128px;
-          bottom: 0;
+          right: -37px;
+          bottom: -24px;
           transform: scale(-1, 1);
+          @media (max-width: $tablet) {
+            font-size: 50px;
+            right: 16px;
+            bottom: -48px;
+          }
+          @media (max-width: $mobile) {
+            display: none;
+          }
         }
 
-        &-title {
-          font-weight: 700;
-          font-size: 22px;
-          color: $c-grey-700;
-          margin-bottom: 24px;
+          &-title {
+            font-weight: 700;
+            font-size: 22px;
+            color: $c-grey-700;
+            margin-bottom: 24px;
+          }
+
+          &-text {
+            color: $c-grey-700;
+            font-size: 15px;
+            font-family: $font-secondary;
+            line-height: 2.25;
+          }
         }
 
-        &-text {
-          color: $c-grey-700;
-          font-size: 15px;
-          font-family: $font-secondary;
-          line-height: 2.25;
-        }
-      }
+        .slide-caption {
+          padding-top: 29px;
+          width: 220px;
+          border-top: 3px solid $c-grey-100;
+          @media (max-width: $tablet) {
+            padding-top: 14px;
+          }
+          .caption-name {
+            color: $c-grey-700;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: $font-secondary;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+          }
 
-      .slide-caption {
-        padding-top: 29px;
-        width: 220px;
-        border-top: 3px solid $c-grey-100;
-        .caption-name {
-          color: $c-grey-700;
-          font-size: 16px;
-          font-weight: bold;
-          font-family: $font-secondary;
-          text-transform: uppercase;
-          margin-bottom: 8px;
-        }
-
-        .caption-icons {
-          color: $c-orange-100;
-          font-size: 14px;
+          .caption-icons {
+            color: $c-orange-100;
+            font-size: 14px;
+          }
         }
       }
     }
-  }
-}
+
+
