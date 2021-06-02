@@ -35,6 +35,9 @@ a {
 h2 {
     font-size: 35px;
     font-weight: 700;
+    @media (max-width: $tablet) {
+      margin-top: -50px;
+    }
 }
 
 .swiper-pagination-bullet {
